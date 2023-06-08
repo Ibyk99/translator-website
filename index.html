@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Iby's Translator">
+        <meta name="author" content="Ibraaheem">
+        <meta viewport content="width=device-width, initial-scale=1.0">
+        <title>Iby's Translator</title>
+    </head>
+    <body>
+        <header>
+            <h1> Iby's Translator Site!</h1>
+            <p><b> (Made using AWS Translate)</b></p>
+        </header>
+        <main>
+            <hr/>
+            <p> Hi, welcome to my translator app! I created this using python, boto3, HTML ...(and more) </p>
+            <br/>
+            <p><b>This app supports the following languages:</b></p>
+            <div>
+              <table>
+                <tr>
+                  <th>Language</th>
+                  <th>Language Code</th>
+                </tr>
+                <tr>
+                  <td>Afrikaans</td>
+                  <td>af</td>
+                </tr>
+                <tr>
+                  <td>Albanian</td>
+                  <td>sq</td>
+                </tr>
+                <tr>
+                  <td>Amharic</td>
+                  <td>am</td>
+                </tr>
+                <tr>
+                  <td>Arabic</td>
+                  <td>ar</td>
+                </tr>
+                <tr>
+                  <td>Armenian</td>
+                  <td>hy</td>
+                </tr>
+                <tr>
+                  <td>Azerbaijani</td>
+                  <td>az</td>
+                </tr>
+                <tr>
+                  <td>Bengali</td>
+                  <td>bn</td>
+                </tr>
+                <tr>
+                  <td>Bosnian</td>
+                  <td>bs</td>
+                </tr>
+                <tr>
+                  <td>Bulgarian</td>
+                  <td>bg</td>
+                </tr>
+                <tr>
+                  <td>Catalan</td>
+                  <td>ca</td>
+                </tr>
+                <tr>
+                  <td>Chinese (Simplified)</td>
+                  <td>zh</td>
+                </tr>
+                <tr>
+                  <td>Chinese (Traditional)</td>
+                  <td>zh-TW</td>
+                </tr>
+                <tr>
+                  <td>Croatian</td>
+                  <td>hr</td>
+                </tr>
+                <tr>
+                  <td>Czech</td>
+                  <td>cs</td>
+                </tr>
+                <tr>
+                  <td>Danish</td>
+                  <td>da</td>
+                </tr>
+                <tr>
+                  <td>Dari</td>
+                  <td>fa-AF</td>
+                </tr>
+                <tr>
+                  <td>Dutch</td>
+                  <td>nl</td>
+                </tr>
+                <tr>
+                  <td>English</td>
+                  <td>en</td>
+                </tr>
+                <tr>
+                  <td>Estonian</td>
+                  <td>et</td>
+                </tr>
+                <tr>
+                  <td>Farsi (Persian)</td>
+                  <td>fa</td>
+                </tr>
+                <tr>
+                  <td>Filipino, Tagalog</td>
+                  <td>tl</td>
+                </tr>
+                <tr>
+                  <td>Finnish</td>
+                  <td>fi</td>
+                </tr>
+                <tr>
+                  <td>French</td>
+                  <td>fr</td>
+                </tr>
+                <tr>
+                  <td>French (Canada)</td>
+                  <td>fr-CA</td>
+                </tr>
+                <tr>
+                  <td>Georgian</td>
+                  <td>ka</td>
+                </tr>
+                <tr>
+                  <td>German</td>
+                  <td>de</td>
+                </tr>
+                <tr>
+                  <td>Greek</td>
+                  <td>el</td>
+                </tr>
+                <tr>
+                  <td>Gujarati</td>
+                  <td>gu</td>
+                </tr>
+                <tr>
+                  <td>Haitian Creole</td>
+                  <td>ht</td>
+                </tr>
+                <tr>
+                  <td>Hausa</td>
+                  <td>ha</td>
+                </tr>
+                <tr>
+                  <td>Hebrew</td>
+                  <td>he</td>
+                </tr>
+                <tr>
+                  <td>Hindi</td>
+                  <td>hi</td>
+                </tr>
+                <tr>
+                  <td>Hungarian</td>
+                  <td>hu</td>
+                </tr>
+                <tr>
+                  <td>Icelandic</td>
+                  <td>is</td>
+                </tr>
+                <tr>
+                  <td>Indonesian</td>
+                  <td>id</td>
+                </tr>
+                <tr>
+                  <td>Irish</td>
+                  <td>ga</td>
+                </tr>
+                <tr>
+                  <td>Italian</td>
+                  <td>it</td>
+                </tr>
+                <tr>
+                  <td>Japanese</td>
+                  <td>ja</td>
+                </tr>
+                <tr>
+                  <td>Kannada</td>
+                  <td>kn</td>
+                </tr>
+                <tr>
+                  <td>Kazakh</td>
+                  <td>kk</td>
+                </tr>
+                <tr>
+                  <td>Korean</td>
+                  <td>ko</td>
+                </tr>
+                <tr>
+                  <td>Latvian</td>
+                  <td>lv</td>
+                </tr>
+                <tr>
+                  <td>Lithuanian</td>
+                  <td>lt</td>
+                </tr>
+                <tr>
+                  <td>Macedonian</td>
+                  <td>mk</td>
+                </tr>
+                <tr>
+                  <td>Malay</td>
+                  <td>ms</td>
+                </tr>
+                <tr>
+                  <td>Malayalam</td>
+                  <td>ml</td>
+                </tr>
+                <tr>
+                  <td>Maltese</td>
+                  <td>mt</td>
+                </tr>
+                <tr>
+                  <td>Marathi</td>
+                  <td>mr</td>
+                </tr>
+                <tr>
+                  <td>Mongolian</td>
+                  <td>mn</td>
+                </tr>
+                <tr>
+                  <td>Norwegian (Bokmål)</td>
+                  <td>no</td>
+                </tr>
+                <tr>
+                  <td>Pashto</td>
+                  <td>ps</td>
+                </tr>
+                <tr>
+                  <td>Polish</td>
+                  <td>pl</td>
+                </tr>
+                <tr>
+                  <td>Portuguese (Brazil)</td>
+                  <td>pt</td>
+                </tr>
+                <tr>
+                  <td>Portuguese (Portugal)</td>
+                  <td>pt-PT</td>
+                </tr>
+                <tr>
+                  <td>Punjabi</td>
+                  <td>pa</td>
+                </tr>
+                <tr>
+                  <td>Romanian</td>
+                  <td>ro</td>
+                </tr>
+                <tr>
+                  <td>Russian</td>
+                  <td>ru</td>
+                </tr>
+                <tr>
+                  <td>Serbian</td>
+                  <td>sr</td>
+                </tr>
+                <tr>
+                  <td>Sinhala</td>
+                  <td>si</td>
+                </tr>
+                <tr>
+                  <td>Slovak</td>
+                  <td>sk</td>
+                </tr>
+                <tr>
+                  <td>Slovenian</td>
+                  <td>sl</td>
+                </tr>
+                <tr>
+                  <td>Somali</td>
+                  <td>so</td>
+                </tr>
+                <tr>
+                  <td>Spanish</td>
+                  <td>es</td>
+                </tr>
+                <tr>
+                  <td>Spanish (Mexico)</td>
+                  <td>es-MX</td>
+                </tr>
+                <tr>
+                  <td>Swahili</td>
+                  <td>sw</td>
+                </tr>
+                <tr>
+                  <td>Swedish</td>
+                  <td>sv</td>
+                </tr>
+                <tr>
+                  <td>Tamil</td>
+                  <td>ta</td>
+                </tr>
+                <tr>
+                  <td>Telugu</td>
+                  <td>te</td>
+                </tr>
+                <tr>
+                  <td>Thai</td>
+                  <td>th</td>
+                </tr>
+                <tr>
+                  <td>Turkish</td>
+                  <td>tr</td>
+                </tr>
+                <tr>
+                  <td>Ukrainian</td>
+                  <td>uk</td>
+                </tr>
+                <tr>
+                  <td>Urdu</td>
+                  <td>ur</td>
+                </tr>
+                <tr>
+                  <td>Uzbek</td>
+                  <td>uz</td>
+                </tr>
+                <tr>
+                  <td>Vietnamese</td>
+                  <td>vi</td>
+                </tr>
+                <tr>
+                  <td>Welsh</td>
+                  <td>cy</td>
+                </tr>
+              </table>
+              
+                <br/>
+                <br/>
+            </div>
+            <form id="translation-form">
+                <h3>Let's translate something!</h3>
+                <p>Please select your <b>Source</b> Language:</p>
+                <input name="sourcelang" id="sourcelang" list="languages">
+                <p>Please select your <b>Target</b> Language:</p>
+                <input name="targetlang" id="targetlang" list="languages">
+                <p>Please input the text you would like to translate:</p>
+                <textarea name="text"></textarea>
+                <br/>
+                <br/>
+                <button type="submit" id="translate-btn">Translate</button>
+                <br/>
+                <h4>This is your translated text:</h4>
+                <textarea readonly id="translated-text"></textarea>
+            </form>    
+          </form>    
+
+          <datalist id="languages">
+          <option value="af"/> 
+          <option value="sq"/>
+          <option value="am"/>
+          <option value="ar"/>
+          <option value="hy"/>
+          <option value="az"/>
+          <option value="bn"/>
+          <option value="bs"/>
+          <option value="bg"/>
+          <option value="ca"/>
+          <option value="zh"/>
+          <option value="zh-TW"/>
+          <option value="hr"/>
+          <option value="cs"/>
+          <option value="da"/>
+          <option value="fa-AF"/>
+          <option value="nl"/>
+          <option value="en"/>
+          <option value="et"/>
+          <option value="fa"/>
+          <option value="tl"/>
+          <option value="fi"/>
+          <option value="fr"/>
+          <option value="fr-CA"/>
+          <option value="ka"/>
+          <option value="de"/>
+          <option value="el"/>
+          <option value="gu"/>
+          <option value="ht"/>
+          <option value="ha"/>
+          <option value="he"/>
+          <option value="hi"/>
+          <option value="hu"/>
+          <option value="is"/>
+          <option value="id"/>
+          <option value="ga"/>
+          <option value="it"/>
+          <option value="ja"/>
+          <option value="kn"/>
+          <option value="kk"/>
+          <option value="ko"/>
+          <option value="lv"/>
+          <option value="lt"/>
+          <option value="mk"/>
+          <option value="ms"/>
+          <option value="ml"/>
+          <option value="mt"/>
+          <option value="mr"/>
+          <option value="mn"/>
+          <option value="no"/>
+          <option value="ps"/>
+          <option value="pl"/>
+          <option value="pt"/>
+          <option value="pt-PT"/>
+          <option value="pa"/>
+          <option value="ro"/>
+          <option value="ru"/>
+          <option value="sr"/>
+          <option value="si"/>
+          <option value="sk"/>
+          <option value="sl"/>
+          <option value="so"/>
+          <option value="es"/>
+          <option value="es-MX"/>
+          <option value="sw"/>
+          <option value="sv"/>
+          <option value="ta"/>
+          <option value="te"/>
+          <option value="th"/>
+          <option value="tr"/>
+          <option value="uk"/>
+          <option value="ur"/>
+          <option value="uz"/>
+          <option value="vi"/>
+          <option value="cy"/>
+          </datalist>
+          
+               
+            </div>
+        </main>
+    </body>
+
+
+
+</html>
+
+<script>
+  // Get a reference to the form and the output textarea
+  const form = document.getElementById('translation-form');
+  const translatedText = document.getElementById('translated-text');
+
+  // Event listener for form submission
+  form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get the form data
+      const formData = new FormData(form);
+      const sourceLang = formData.get('sourcelang');
+      const targetLang = formData.get('targetlang');
+      const text = formData.get('text');
+
+      // Make a POST request to the server with the form data
+      fetch('/translate', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              sourceLang,
+              targetLang,
+              text
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          // Update the translated text in the textarea
+          translatedText.value = data.translatedText;
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  });
+</script>

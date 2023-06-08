@@ -4,7 +4,7 @@ import boto3
 from Language_list import language_list
 
 app = Flask(__name__, template_folder='.')
-client = boto3.client('translate')
+client = boto3.client('translate', region_name = 'us-east-1')
 
 @app.route('/')
 def home():
